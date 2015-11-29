@@ -5,7 +5,6 @@
 #include "RotaryEncoder.h"
 
 void setup(){
-	//Serial.begin(9600);
 	Serial.begin(31250);
 	analogReference(EXTERNAL);
 
@@ -25,35 +24,6 @@ void setup(){
 double loopfreq = 200.0;
 int loopdelay = int(1000.0/loopfreq);
 byte lfo = 0;
-
-void changeColor(){
-  switch (selected) {
-    case 0:
-      ledColor = red;
-      break;
-    case 1:
-      ledColor = green;
-      break;
-    case 2:
-      ledColor = blue;
-      break;
-    case 3:
-      ledColor = yellow;
-      break;
-    case 4:
-      ledColor = pink;
-      break;
-    case 5:
-      ledColor = skyblue;
-      break;
-    case 6:
-      ledColor = white;
-      break;
-    default:
-      ledColor = black;
-      break;
-  }
-}
 
 void loop(){
 	lfo += 4;
@@ -109,18 +79,22 @@ void loop(){
 	else {
 	if (buttonState == true)
 	{
-	switch (selected){
-	case 4:
-	//adxl.xphase += double(change/100.0);
-	break;
-	case 5:
-	//adxl.yphase += double(change/100.0);
-	break;
-	case 6:
-	//adxl.zphase += double(change/100.0);
-	break;
-	default:
-	break;
+		switch (selected){
+		
+		case 4:
+			//TODO
+			break;
+		
+		case 5:
+			//TODO
+			break;
+		
+		case 6:
+			//TODO
+			break;
+		
+		default:
+			break;
 	}
 
 	ledBrightness = 0;

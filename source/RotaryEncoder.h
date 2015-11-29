@@ -16,9 +16,38 @@ int lastRotary = 0;
 Color ledColor = {0,0,0};
 float ledBrightness = 1.0;
 
-int selected = 0;
+int selected = 0; //The currently selected sensor
 
 volatile boolean pressed = false;
+
+void changeColor(){
+  switch (selected) {
+    case 0:
+      ledColor = red;
+      break;
+    case 1:
+      ledColor = green;
+      break;
+    case 2:
+      ledColor = blue;
+      break;
+    case 3:
+      ledColor = yellow;
+      break;
+    case 4:
+      ledColor = pink;
+      break;
+    case 5:
+      ledColor = skyblue;
+      break;
+    case 6:
+      ledColor = white;
+      break;
+    default:
+      ledColor = black;
+      break;
+  }
+}
 
 void ledDo()
 { 

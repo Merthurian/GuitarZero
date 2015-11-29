@@ -42,5 +42,4 @@ Thumbs.db
 *.d
 *.elf
 *.hex
-mariamole_auto_generated.h
 *.a

@@ -1,4 +1,5 @@
-//adxl335
+//adxl335 - Accelerometer
+
 const int ACC_X_PIN = A0;
 const int ACC_Y_PIN = A1;
 const int ACC_Z_PIN = A2;
@@ -52,7 +53,8 @@ class ADXL
 		//Serial.write(0xB0);
 		//Serial.write(12);
 		//Serial.write(bx);
-
+		//Only using 2 axis at the moment for testing.
+		
 		Serial.write(0xB0);
 		Serial.write(13);
 		Serial.write(by);
