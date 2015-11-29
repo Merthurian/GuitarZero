@@ -155,4 +155,4 @@ class FSR
 int FSR::id = 0;
 int FSR::modes = 4;
 
-FSR FSRs[4];// {fsr1, fsr2, fsr3, fsr4};
+FSR FSRs[4];
