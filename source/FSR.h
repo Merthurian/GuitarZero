@@ -87,7 +87,8 @@ class FSR
 		switch(mode)
 		{
 			case 0:
-				if (value > thresh){
+				if (value > thresh)
+				{
 					on = true;
 						   
 					Serial.write(channel);
@@ -119,28 +120,25 @@ class FSR
 			case 2:
 				if (value > thresh)
 				{
-					on = false;
-					
+					on = true;
+						   
 					Serial.write(channel);
 					Serial.write(12);
-					Serial.write(val);
+					Serial.write(val);          
 				}
-				else
+				else if (on)
 				{
-					if (on)
-					{
-						Serial.write(channel);
-						Serial.write(cc);
-						Serial.write(0);
-					  
-						on = false;
-					}     
-				}		
+					Serial.write(channel);
+					Serial.write(12);
+					Serial.write(0);
+				  
+					on = false;
+				}    
 				break;
 			
-			case 3:		
-			
-				if (value > thresh){
+			case 3:					
+				if (value > thresh)
+				{
 					on = true;
 						   
 					Serial.write(channel);
@@ -157,6 +155,10 @@ class FSR
 					{
 						Serial.write(channel);
 						Serial.write(cc);
+						Serial.write(0);
+						
+						Serial.write(channel);
+						Serial.write(12);
 						Serial.write(0);
 					  
 						on = false;

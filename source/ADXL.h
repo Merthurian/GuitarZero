@@ -51,10 +51,9 @@ class ADXL
 		byte bz = byte(map(z, 0, 180, 127, 0));
 
 		//Serial.write(0xB0);
-		//Serial.write(12);
+		//Serial.write(15);
 		//Serial.write(bx);
-		//Only using 2 axis at the moment for testing.
-		
+				
 		Serial.write(0xB0);
 		Serial.write(13);
 		Serial.write(by);
