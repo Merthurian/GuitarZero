@@ -1,0 +1,1 @@
+I've stuck four force sensitive resistors, an accelerometer and an arduino mega onto my guitar. This code ties it all together.
