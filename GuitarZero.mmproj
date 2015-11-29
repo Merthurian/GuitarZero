@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mm_project current="1" serial_port="COM8" programmer="" board="Arduino Mega (ATmega1280)" includePaths="" libPaths="" srcPaths="" libs="" useCodeAutomation="1" linkPrintfVersion="4485861" serialPortSpeed="9600" isLibrary="0">
+    <files>
+        <file name="GuitarZero.cpp" open="yes"/>
+        <file name="mariamole_auto_generated.h" open="no"/>
+        <file name=".gitignore" open="no"/>
+        <file name="ADXL.h" open="yes"/>
+        <file name="Color.h" open="yes"/>
+        <file name="FSR.h" open="yes"/>
+        <file name="hs_err_pid3660.log" open="no"/>
+        <file name="RotaryEncoder.h" open="yes"/>
+    </files>
+    <externals/>
+</mm_project>

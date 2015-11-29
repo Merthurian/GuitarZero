@@ -35,3 +35,12 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Maria Mole Stuff #
+####################
+
+*.d
+*.elf
+*.hex
+mariamole_auto_generated.h
+*.a
