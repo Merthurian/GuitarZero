@@ -117,23 +117,39 @@ class FSR
 				break;
 				
 			case 2:
-				on = false;
-				Serial.write(channel);
-				Serial.write(12);
-				Serial.write(val);
+				if (value > thresh)
+				{
+					on = false;
+					
+					Serial.write(channel);
+					Serial.write(12);
+					Serial.write(val);
+				}
+				else
+				{
+					if (on)
+					{
+						Serial.write(channel);
+						Serial.write(cc);
+						Serial.write(0);
+					  
+						on = false;
+					}     
+				}		
 				break;
 			
-			case 3:
-				Serial.write(channel);
-				Serial.write(12);
-				Serial.write(val);
+			case 3:		
 			
 				if (value > thresh){
 					on = true;
 						   
 					Serial.write(channel);
 					Serial.write(cc);
-					Serial.write(127);          
+					Serial.write(127);     
+
+					Serial.write(channel);
+					Serial.write(12);
+					Serial.write(val);
 				}
 				else
 				{
